@@ -26,7 +26,7 @@ app.use(function (err, req, res, next) {
     if (err.name === 'UnauthorizedError') {
         res.status(401).send('invalid token, or no token supplied');
     } else {
-        res.status(401).send(err);
+        next(err, null)
     }
 });
 
@@ -67,14 +67,6 @@ app.use('/<path>',auth.authenticated,function(req,res,next) {
     next();
 });
 
-// catch error
-app.use(function (err, req, res, next) {
-    if (err.name === 'UnauthorizedError') {
-        res.status(401).send('invalid token, or no token supplied');
-    } else {
-        res.status(401).send(err);
-    }
-});
 ```
 
 ## Alter user data before creating a new user
