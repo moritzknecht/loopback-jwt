@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/whoGloo/loopback-jwt#readme",
   "dependencies": {
-    "bluebird": "^3.3.4",
-    "debug": "^2.2.0",
-    "express-jwt": "^3.3.0",
-    "uuid": "^2.0.1"
+    "bluebird": "^3.5.1",
+    "debug": "^2.6.9",
+    "express-jwt": "^3.4.0",
+    "uuid": "^2.0.3"
   }
 }
